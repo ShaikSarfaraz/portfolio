@@ -1,0 +1,35 @@
+@import "@fontsource/poppins";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-dark;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-semibold py-2 px-4 rounded-full hover:bg-opacity-90 transition duration-300;
+  }
+  .section-title {
+    @apply text-3xl font-bold mb-8 text-center relative inline-block;
+  }
+  .section-title::after {
+    content: "";
+    @apply absolute left-1/2 bottom-0 w-20 h-1 bg-primary -translate-x-1/2;
+  }
+  .text-dark {
+    color: #333333;
+  }
+}
