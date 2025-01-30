@@ -12,7 +12,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Sarfaraz Shaik - Portfolio",
-  description: "Frontend Developer | React Developer | UI Developer",
+  description: "Frontend Developer",
 }
 
 export default function RootLayout({

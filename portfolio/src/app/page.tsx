@@ -6,6 +6,7 @@ import About from "@/components/About"
 import Experience from "@/components/Experience"
 import Education from "@/components/Education"
 import Skills from "@/components/Skills"
+import SkillsAnima from "@/components/SkillsAnima"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
 import { useSmoothScroll } from "@/hooks/useSmoothScroll"
@@ -20,10 +21,11 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <About />
-        <Experience />
-        <Education />
         <Skills />
         <Projects />
+        <Experience />
+        <Education />
+        {/* <SkillsAnima /> */}
         <Contact />
       </main>
       <Footer />
