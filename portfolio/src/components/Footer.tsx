@@ -8,7 +8,7 @@ const Footer = () => {
           <p className="mb-4 md:mb-0">&copy; {new Date().getFullYear()} Sarfaraz Shaik. All rights reserved.</p>
           <div className="flex space-x-4">
             <a
-              href="https://github.com/sarfarazshaik"
+              href="https://github.com/ShaikSarfaraz"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-primary transition duration-300"
@@ -16,7 +16,7 @@ const Footer = () => {
               <FaGithub size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/sarfaraz-shaik"
+              href="https://www.linkedin.com/in/sarfaraz-shaik/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-primary transition duration-300"
@@ -24,7 +24,7 @@ const Footer = () => {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://twitter.com/sarfarazshaik"
+              href="https://x.com/sohaillsarfaraz"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-primary transition duration-300"
