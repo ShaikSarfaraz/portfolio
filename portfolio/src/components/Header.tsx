@@ -32,8 +32,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}
-    >
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md ${isScrolled ? "bg-transparent shadow-md" : "bg-transparent"}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <ScrollLink href="#hero">
@@ -57,3 +56,4 @@ const Header = () => {
 }
 
 export default Header
+
