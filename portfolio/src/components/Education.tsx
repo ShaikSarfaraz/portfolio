@@ -24,16 +24,7 @@ const Education = () => {
     <section id="education" className="py-20 bg-navy text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title text-white">Education</h2>
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="Education"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+        <div className="">
           <div className="md:w-1/2 md:pl-8">
             {educations.map((edu, index) => (
               <div

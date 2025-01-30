@@ -11,6 +11,7 @@ import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
 import { useSmoothScroll } from "@/hooks/useSmoothScroll"
 import Projects from "@/components/Projects"
+import Services from "@/components/Services"
 
 export default function Home() {
   useSmoothScroll()
@@ -22,9 +23,12 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <Services />
         <Projects />
+        {/* <div className="flex"> */}
         <Experience />
-        <Education />
+        {/* <Education /> */}
+        {/* </div> */}
         {/* <SkillsAnima /> */}
         <Contact />
       </main>
