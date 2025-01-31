@@ -21,7 +21,7 @@ const Education = () => {
   ]
 
   return (
-    <section id="education" className="py-20 bg-navy text-white">
+    <section id="education" className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title text-white">Education</h2>
         <div className="">

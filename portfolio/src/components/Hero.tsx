@@ -24,7 +24,7 @@ const ScrollLink = ({ href, children }: { href: string; children: React.ReactNod
 
 const Hero = () => {
   return (
-    <section id="hero" className="pt-24 pb-12 bg-navy text-white">
+    <section id="hero" className="pt-24 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">

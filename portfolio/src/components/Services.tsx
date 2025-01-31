@@ -8,11 +8,11 @@ const Services = () => {
   }
 
   return (
-    <section id="services" className="py-20 px-4 bg-sand">
+    <section id="services" className="py-20 px-4 ">
             {/* <section id="about" className="py-20 bg-sand"> */}
             {/* <div className="container mx-auto px-4 sm:px-6 lg:px-8"> */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.p className="section-title text-white font-semibold mb-4">
+        <motion.p className="section-title font-semibold mb-4">
           SERVICES
         </motion.p>
         {/* <h2 className="section-title">Skills</h2> */}

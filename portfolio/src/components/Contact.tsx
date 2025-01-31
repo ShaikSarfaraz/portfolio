@@ -2,9 +2,9 @@ import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa"
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-navy text-white">
+    <section id="contact" className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title text-white">Get in Touch</h2>
+        <h2 className="section-title">Get in Touch</h2>
         <div className="max-w-4xl mx-auto">
           <div className="bg-white text-navy rounded-lg shadow-md overflow-hidden">
             <div className="md:flex">
