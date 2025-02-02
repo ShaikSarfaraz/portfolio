@@ -39,7 +39,7 @@ const Experience = () => {
                 <FaBriefcase className="text-coral mr-2 text-xl" />
                 <h3 className="text-xl font-semibold">{exp.title}</h3>
               </div>
-              <h4 className="text-lg text-navy mb-2">{exp.company}</h4>
+              <h4 className="text-lg text-gray-500 mb-2">{exp.company}</h4>
               <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
               <p className="text-gray-700">{exp.description}</p>
             </div>
