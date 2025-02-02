@@ -79,13 +79,25 @@ const Header = () => {
               <span className="font-bold text-xl text-gray-900 dark:text-white">Sarfaraz Shaik</span>
             </div>
           </ScrollLink>
+          {/* <ScrollLink href="#hero">
+            <div className="flex items-center">
+              <Image src="/logo.png" alt="Sarfaraz Shaik" width={40} height={40} className="mr-2" />
+              <span className="font-bold text-xl text-gray-900 dark:text-white">Sarfaraz Shaik</span>
+            </div>
+          </ScrollLink> */}
           <div className="hidden md:flex items-center space-x-4">
             <ScrollLink href="#about">About</ScrollLink>
             <ScrollLink href="#skills">Skills</ScrollLink>
             <ScrollLink href="#services">Services</ScrollLink>
             <ScrollLink href="#projects">Projects</ScrollLink>
             <ScrollLink href="#experience">Experience</ScrollLink>
-            <ScrollLink href="#contact">Contact</ScrollLink>
+            {/* <ScrollLink href="#contact">Contact</ScrollLink>
+            <ScrollLink href="#about">About</ScrollLink>
+            <ScrollLink href="#skills">Skills</ScrollLink>
+            <ScrollLink href="#services">Services</ScrollLink>
+            <ScrollLink href="#projects">Projects</ScrollLink>
+            <ScrollLink href="#experience">Experience</ScrollLink>
+            <ScrollLink href="#contact">Contact</ScrollLink> */}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"

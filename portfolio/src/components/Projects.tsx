@@ -83,6 +83,6 @@ const Projects: React.FC = () => {
     </section>
   )
 }
-
+ 
 export default Projects
 
