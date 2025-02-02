@@ -35,6 +35,31 @@ const Contact = () => {
                     </a>
                   </li>
                 </ul>
+                {/* <ul className="space-y-4">
+                  <li className="flex items-center">
+                    <FaPhone className="text-coral mr-2" />
+                    <a href="tel:9397949059" className="hover:text-coral transition duration-300">
+                      +91 9397949059
+                    </a>
+                  </li>
+                  <li className="flex items-center">
+                    <FaEnvelope className="text-coral mr-2" />
+                    <a href="mailto:sarfarazshaik2807@gmail.com" className="hover:text-coral transition duration-300">
+                      sarfarazshaik2807@gmail.com
+                    </a>
+                  </li>
+                  <li className="flex items-center">
+                    <FaLinkedin className="text-coral mr-2" />
+                    <a
+                      href="https://www.linkedin.com/in/sarfaraz-shaik"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-coral transition duration-300"
+                    >
+                      linkedin.com/in/sarfaraz-shaik
+                    </a>
+                  </li>
+                </ul> */}
               </div>
               <div className="md:w-1/2 p-6 bg-sand">
                 <h3 className="text-2xl font-semibold mb-4">Send a Message</h3>

@@ -11,6 +11,15 @@ interface Project {
   image: string
 }
 
+// interface Project {
+//   title: string
+//   client: string
+//   company: string
+//   role: string
+//   description: string
+//   image: string
+// }
+
 const projects: Project[] = [
   {
     title: "Cloud Inventory Management System (CIMS)",
@@ -39,6 +48,33 @@ const projects: Project[] = [
       "Developed and designed user interfaces for a healthcare management platform catering to providers and NHS/ICB users. Designed and implemented modules such as Provider Onboarding, Facility Setup, Bed Management, and Reports, focusing on modern, intuitive, and responsive UI using React.js, Redux Toolkit, and TypeScript. UI Design: Created visually appealing and user-centric interfaces with smart search, filters, and validation flows, Figma designs, ensuring a seamless and engaging user experience. Google Maps Integration: Enhanced location-based services by embedding maps and interactive elements for user navigation. Performance Optimization: Integrated AWS CloudFront for image caching, reducing load times and improving UI responsiveness. Reporting Modules: Developed dynamic, visually clear reporting tools, including features like export functionality, dynamic filters, and role-based access controls. Collaboration: Worked closely with the UX/UI team to ensure alignment with design standards and user needs, contributing to the platform's usability and accessibility.",
     image: "/LocateCare.png?height=300&width=400",
   },
+  // {
+  //   title: "Cloud Inventory Management System (CIMS)",
+  //   client: "Foxfire Technologies",
+  //   company: "Foxfire Technologies",
+  //   role: "Software Engineer",
+  //   description:
+  //     "My role revolves around designing user-friendly interfaces and integrating RF devices for efficient warehouse operations within the Cloud Inventory Management System (CIMS). I ensure smooth data transactions between the host system and CIMS, enabling real-time updates on inventory status and order processing. Emphasizing responsive design and performance optimization, I strive to create a reliable interface that boosts productivity and reduces errors. Furthermore, I offer documentation and training to support warehouse staff in effectively utilizing the system.",
+  //   image: "/CIMS.png?height=300&width=400",
+  // },
+  // {
+  //   title: "Truck Management System",
+  //   client: "Trangla Innovations",
+  //   company: "Trangla Innovations",
+  //   role: "Frontend Developer",
+  //   description:
+  //     "Engineered the Fleet Management System for SwiftLogistics, an end-to-end solution for optimizing trucking operations. This system streamlines fleet management tasks, including truck and driver profiles, load assignments, and route optimization. Real-time tracking and communication tools ensure efficient coordination between dispatchers and drivers, enhancing overall logistics efficiency and customer satisfaction.",
+  //   image: "/Truck.png?height=300&width=400",
+  // },
+  // {
+  //   title: "Locate Care",
+  //   client: "Salvone Technology Solutions",
+  //   company: "Netweb Software",
+  //   role: "React Developer",
+  //   description:
+  //     "Developed and designed user interfaces for a healthcare management platform catering to providers and NHS/ICB users. Designed and implemented modules such as Provider Onboarding, Facility Setup, Bed Management, and Reports, focusing on modern, intuitive, and responsive UI using React.js, Redux Toolkit, and TypeScript. UI Design: Created visually appealing and user-centric interfaces with smart search, filters, and validation flows, Figma designs, ensuring a seamless and engaging user experience. Google Maps Integration: Enhanced location-based services by embedding maps and interactive elements for user navigation. Performance Optimization: Integrated AWS CloudFront for image caching, reducing load times and improving UI responsiveness. Reporting Modules: Developed dynamic, visually clear reporting tools, including features like export functionality, dynamic filters, and role-based access controls. Collaboration: Worked closely with the UX/UI team to ensure alignment with design standards and user needs, contributing to the platform's usability and accessibility.",
+  //   image: "/LocateCare.png?height=300&width=400",
+  // }
 ]
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
