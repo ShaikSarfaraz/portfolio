@@ -79,7 +79,7 @@ const projects: Project[] = [
 ]
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+  <div className="rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
     <Image
       src={project.image || "/placeholder.svg"}
       alt={project.title}
