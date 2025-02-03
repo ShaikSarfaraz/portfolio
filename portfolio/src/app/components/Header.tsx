@@ -75,8 +75,16 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <ScrollLink href="#hero">
             <div className="flex items-center">
-              <Image src="/logo.png" alt="Sarfaraz Shaik" width={40} height={40} className="mr-2" />
-              <span className="font-bold text-xl text-gray-900 dark:text-white">Sarfaraz Shaik</span>
+            <Image
+              src="/PassportSize.webp?height=400&width=400"
+              alt="Sarfaraz Shaik"
+              width={48}
+              height={48}
+              className="relative size-12 rounded-full overflow-hidden border-2 border-border"
+              // className="rounded-full shadow-lg border-4 border-teal"
+              // className="object-cover"
+              
+            />
             </div>
           </ScrollLink>
           <div className="hidden md:flex items-center space-x-4">

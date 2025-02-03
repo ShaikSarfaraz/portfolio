@@ -1,17 +1,17 @@
 "use client"
 
-import Header from "@/components/Header"
-import Hero from "@/components/Hero"
-import About from "@/components/About"
-import Experience from "@/components/Experience"
-import Education from "@/components/Education"
-import Skills from "@/components/Skills"
-import SkillsAnima from "@/components/SkillsAnima"
-import Contact from "@/components/Contact"
-import Footer from "@/components/Footer"
+import Header from "./components/Header"
+import Hero from "./components/Hero"
+import About from "./components/About"
+import Experience from "./components/Experience"
+import Education from "./components/Education"
+import Skills from "./components/Skills"
+import SkillsAnima from "./components/SkillsAnima"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 import { useSmoothScroll } from "@/hooks/useSmoothScroll"
-import Projects from "@/components/Projects"
-import Services from "@/components/Services"
+import Projects from "./components/Projects"
+import Services from "./components/Services"
 
 export default function Home() {
   useSmoothScroll()
@@ -25,14 +25,9 @@ export default function Home() {
         <Skills />
         <Services />
         <Projects />
-        {/* <div className="flex"> */}
         <Experience />
-        {/* <Education /> */}
-        {/* </div> */}
-        {/* <SkillsAnima /> */}
         <Contact />
       </main>
-      <Footer />
     </div>
   )
 }

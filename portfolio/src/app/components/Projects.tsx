@@ -1,6 +1,7 @@
 import type React from "react"
 import { FaCode, FaBriefcase, FaUserTie } from "react-icons/fa"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 interface Project {
   title: string
@@ -107,12 +108,21 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-20 bg-teal bg-opacity-10">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
+              <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="border-t-2 border-primary pt-6"
+            >
             <ProjectCard key={index} project={project} />
+            </motion.div>
           ))}
         </div>
       </div>
