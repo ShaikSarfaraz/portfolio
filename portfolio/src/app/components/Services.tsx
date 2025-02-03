@@ -8,32 +8,30 @@ const Services = () => {
   }
 
   return (
-    <section id="services" className="py-20 px-4 ">
-            {/* <section id="about" className="py-20 bg-sand"> */}
-            {/* <div className="container mx-auto px-4 sm:px-6 lg:px-8"> */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="section-padding elegant-border">
+      <div className="container mx-auto container-padding">
         <motion.p className="section-title font-semibold mb-4">
           SERVICES
         </motion.p>
-        {/* <h2 className="section-title">Skills</h2> */}
 
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center max-w-3xl mx-auto mb-16"
+          className="text-4xl md:text-3xl font-bold text-center max-w-3xl mx-auto mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Code that solves problems,
-          <br />
-          one product at a time.
+          <span>Code that solves problems,</span>
+          <span>one product at a time.</span>
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-12">
           {/* What I can do for you */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+          // className="border-t-2 border-primary pt-6"
           >
             <div className="mb-6">
               <svg viewBox="0 0 100 100" className="w-16 h-16">
@@ -45,20 +43,29 @@ const Services = () => {
             <p className="text-l mb-6">
               Deliver faster, better products that your users will love. Here are the services I provide:
             </p>
-            <ul className="space-y-3">
-              <li>Design Strategy</li>
-              <li>Web Developemnt</li>
-              <li>Front-end Development</li>
-              <li>UI Design</li>
-              {/* <li>React Development</li> */}
-            </ul>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+            // className="border-t-2 border-primary pt-6"
+            >
+              <ul className="space-y-3">
+                <li>Design Strategy</li>
+                <li>Web Developemnt</li>
+                <li>Front-end Development</li>
+                <li>UI Design</li>
+                {/* <li>React Development</li> */}
+              </ul>
+            </motion.div>
           </motion.div>
 
-          {/* Applications I'm fluent in */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+          // className="border-t-2 border-primary pt-6"
           >
             <div className="mb-6">
               <svg viewBox="0 0 100 100" className="w-16 h-16">
@@ -71,19 +78,29 @@ const Services = () => {
               Every designer needs the right tools to craft the perfect product. Thankfully, I'm proficient in multiple
               platforms:
             </p>
-            <ul className="space-y-3">
-              <li>Sketch</li>
-              <li>Webflow</li>
-              <li>Figma</li>
-              <li>Photoshop</li>
-            </ul>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+            // className="border-t-2 border-primary pt-6"
+            >
+              <ul className="space-y-3">
+                <li>Sketch</li>
+                <li>Webflow</li>
+                <li>Figma</li>
+                <li>Photoshop</li>
+              </ul>
+            </motion.div>
           </motion.div>
 
           {/* What you can expect */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+          // className="border-t-2 border-primary pt-6"
           >
             <div className="mb-6">
               <svg viewBox="0 0 100 100" className="w-16 h-16">
@@ -95,11 +112,19 @@ const Services = () => {
             <p className="text-l mb-6">
               I design products that go beyond aesthetics—they're shippable and usable:
             </p>
-            <ul className="space-y-3">
-              <li className="font-medium">Clean and Functional: Intuitive designs that prioritize functionality.</li>
-              <li className="font-medium">Device and User Friendly: Seamless experiences across all devices.</li>
-              <li className="font-medium">Efficient and Maintainable: Code that is easy to manage and scale.</li>
-            </ul>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+            // className="border-t-2 border-primary pt-6"
+            >
+              <ul className="space-y-3">
+                <li className="font-medium">Clean and Functional: Intuitive designs that prioritize functionality.</li>
+                <li className="font-medium">Device and User Friendly: Seamless experiences across all devices.</li>
+                <li className="font-medium">Efficient and Maintainable: Code that is easy to manage and scale.</li>
+              </ul>
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -63,11 +63,16 @@
     @apply bg-primary text-primary-foreground font-semibold py-2 px-4 rounded-full hover:bg-primary/90 transition duration-300;
   }
   .section-title {
-    @apply text-3xl font-bold mb-8 text-center relative inline-block;
+    @apply text-3xl font-bold mb-16 text-center;
   }
-  .section-title::after {
+  .section-padding {
+    @apply py-10 md:py-20;
+  }
+
+  /* .section-title::after {
     content: "";
     @apply absolute left-1/2 bottom-0 w-20 h-1 bg-primary -translate-x-1/2;
-  }
+  } */
 }
+
 
