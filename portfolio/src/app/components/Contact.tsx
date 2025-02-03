@@ -78,7 +78,7 @@ const Contact = () => {
                   type="text"
                   id="name"
                   {...register("name", { required: "Name is required" })}
-                  className="w-full p-2 border-b border-border focus:border-primary focus:outline-none bg-transparent"
+                  className="w-auto p-2 border-b border-border focus:border-primary focus:outline-none bg-transparent"
                 />
                 {errors.name && <span className="text-red-500 text-sm">{String(errors.name.message)}</span>}
               </div>
@@ -96,7 +96,7 @@ const Contact = () => {
                       message: "Invalid email address",
                     },
                   })}
-                  className="w-full p-2 border-b border-border focus:border-primary focus:outline-none bg-transparent"
+                  className="w-auto p-2 border-b border-border focus:border-primary focus:outline-none bg-transparent"
                 />
                 {errors.email && <span className="text-red-500 text-sm">{String(errors.email.message)}</span>}
               </div>
@@ -108,7 +108,7 @@ const Contact = () => {
                   id="message"
                   {...register("message", { required: "Message is required" })}
                   rows={4}
-                  className="w-full p-2 border-b border-border focus:border-primary focus:outline-none bg-transparent"
+                  className="w-auto p-2 border-b border-border focus:border-primary focus:outline-none bg-transparent"
                 ></textarea>
                 {errors.message && <span className="text-red-500 text-sm">{String(errors.message.message)}</span>}
               </div>
