@@ -17,7 +17,7 @@ const ScrollLink = ({ href, children }: { href: string; children: React.ReactNod
     <a
       href={href}
       onClick={handleClick}
-      className="px-8 py-3 bg-primary text-base font-medium rounded-full text-primary-foreground hover:bg-primary hover:opacity-70 transition-colors duration-300"
+      className="hidden md:inline px-8 py-3 border border-primary text-base font-medium rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
     >
       {children}
     </a>
@@ -88,7 +88,7 @@ const Hero = () => {
     //     {/* </div> */}
     //   </div>
     // </section>
-    <section className="min-h-screen flex items-center section-padding">
+    <section id="hero" className="min-h-screen flex items-center section-padding">
       <div className="container mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-xl text-muted-foreground">
-          I love crafting stunning web experiences and turning ideas into reality with code.
+            I love crafting stunning web experiences and turning ideas into reality with code.
           </p>
           <motion.div
             className="mt-10"
@@ -116,12 +116,13 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <a
+            {/* <a
               href="#contact"
               className="hidden md:inline px-8 py-3 border border-primary text-base font-medium rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
             >
               Get in Touch
-            </a>
+            </a> */}
+            <ScrollLink href="#contact">Get in Touch</ScrollLink>
 
             <a
               href="/Sarfaraz-Shaik-Frontend-Developer.pdf"
