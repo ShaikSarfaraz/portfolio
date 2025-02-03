@@ -38,13 +38,12 @@ const Skills = () => {
       ],
     },
     // {
-    //   category: "AI/ML Integration",
+    //   category: "UI Design",
     //   items: [
-    //     { name: "TensorFlow", level: 80 },
-    //     { name: "PyTorch", level: 75 },
-    //     { name: "NLP", level: 85 },
-    //     { name: "LLMs", level: 80 },
-    //     { name: "Data Analysis", level: 90 },
+    //     { name: "Photoshop", level: 90 },
+    //     { name: "Figma", level: 80 },
+    //     { name: "Sketch", level: 80 },
+    //     { name: "Webflow", level: 75 },
     //   ],
     // },
     // {
@@ -96,7 +95,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-      <SkillsAnima />
+      {/* <SkillsAnima /> */}
     </section>
   )
 }

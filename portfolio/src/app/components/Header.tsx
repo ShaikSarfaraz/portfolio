@@ -87,7 +87,6 @@ const Header = () => {
             </div>
           </ScrollLink>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
             <ScrollLink href="#about">About</ScrollLink>
             <ScrollLink href="#skills">Skills</ScrollLink>
@@ -97,7 +96,6 @@ const Header = () => {
             <ScrollLink href="#contact">Contact</ScrollLink>
           </div>
 
-          {/* Theme Toggle and Mobile Menu Button */}
           <div className="flex items-center space-x-2">
             <button
               onClick={toggleTheme}
