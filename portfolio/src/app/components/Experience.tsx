@@ -52,6 +52,22 @@ const Experience = () => {
                 <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
                 <p className="text-gray-700">{exp.description}</p>
                 </motion.div>
+                {/* <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="border-l-2 border-primary pl-6"
+              >
+                <div className="flex items-center mb-4">
+                  <FaBriefcase className="text-coral mr-2 text-xl" />
+                  <h3 className="text-xl font-semibold">{exp.title}</h3>
+                </div>
+                <h4 className="text-lg text-navy mb-2">{exp.company}</h4>
+                <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
+                <p className="text-gray-700">{exp.description}</p>
+                </motion.div> */}
             </div>
           ))}
       </div>

@@ -95,6 +95,13 @@ const Skills = () => {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         viewport={{ once: true, amount: 0.2 }}
                       ></motion.div>
+                      {/* <motion.div
+                        className="bg-primary h-1 rounded-full"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                      ></motion.div> */}
                     </div>
                   </div>
                 ))}
