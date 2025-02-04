@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import SkillsAnima from "./SkillsAnima"
+import { TypeAnimation } from "react-type-animation"
 
 const Skills = () => {
   // const skills = [
@@ -62,6 +63,13 @@ const Skills = () => {
     <section id="skills" className="section-padding elegant-border">
       <div className="container mx-auto container-padding">
         <h2 className="section-title">Skills</h2>
+        {/* <TypeAnimation
+                sequence={["FrontEnd Developer", 2000, "React Developer", 2000, "UI Developer", 2000]}
+                wrapper="span"
+                speed={50}
+                repeat={Number.POSITIVE_INFINITY}
+                className="section-title"
+              /> */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {skills.map((skillCategory, index) => (
             <motion.div
