@@ -46,9 +46,9 @@ const Hero = () => {
             </span>
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-xl text-muted-foreground">
-          Passionate Frontend Developer with 3 years of experience in building high-performance, user-centric web applications. 
-          Skilled in React, Next.js, and modern front-end technologies. I constantly explore new technologies to push the boundaries 
-          of front-end development.
+            Passionate Frontend Developer with 3 years of experience in building high-performance, user-centric web applications.
+            Skilled in React, Next.js, and modern front-end technologies. I constantly explore new technologies to push the boundaries
+            of front-end development.
           </p>
           <motion.div
             className="mt-10"
@@ -66,6 +66,24 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+      <motion.div
+        className="absolute left-1/2 bottom-10 transform -translate-x-1/2 flex justify-center items-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.8 }}
+      >
+        <motion.div
+          className="w-10 h-16 border-2 border-primary rounded-full flex justify-center items-start p-1"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <motion.div
+            className="w-2 h-2 bg-primary rounded-full"
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
+      </motion.div>
     </section>
   )
 }
