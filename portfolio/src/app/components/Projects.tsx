@@ -1,4 +1,4 @@
-import type React from "react"
+import React, { useState } from "react"
 import { FaCode, FaBriefcase, FaUserTie } from "react-icons/fa"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -78,33 +78,52 @@ const projects: Project[] = [
   // }
 ]
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
-  <div className="rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-    <Image
-      src={project.image || "/placeholder.svg"}
-      alt={project.title}
-      width={400}
-      height={300}
-      className="w-full h-48 object-cover"
-    />
-    <div className="p-6">
-      <h3 className="text-xl font-semibold text-navy mb-2">{project.title}</h3>
-      <p className="flex items-center mb-2">
-        <FaBriefcase className="mr-2 text-coral" />
-        <span className="font-semibold">Client:</span> {project.client}
-      </p>
-      <p className="flex items-center mb-2">
-        <FaCode className="mr-2 text-coral" />
-        <span className="font-semibold">Company:</span> {project.company}
-      </p>
-      <p className="flex items-center mb-4">
-        <FaUserTie className="mr-2 text-coral" />
-        <span className="font-semibold">Role:</span> {project.role}
-      </p>
-      <p className="text-gray-700">{project.description.substring(0, 150)}...</p>
+const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const [expanded, setExpanded] = useState(false);
+  const shortDescription = project.description.substring(0, 150);
+
+  return (
+    <div className="rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+      <Image
+        src={project.image || "/placeholder.svg"}
+        alt={project.title}
+        width={400}
+        height={300}
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-navy mb-2">{project.title}</h3>
+        <p className="flex items-center mb-2">
+          <FaBriefcase className="mr-2 text-coral" />
+          <span className="font-semibold">Client:</span> {project.client}
+        </p>
+        <p className="flex items-center mb-2">
+          <FaCode className="mr-2 text-coral" />
+          <span className="font-semibold">Company:</span> {project.company}
+        </p>
+        <p className="flex items-center mb-4">
+          <FaUserTie className="mr-2 text-coral" />
+          <span className="font-semibold">Role:</span> {project.role}
+        </p>
+        
+        {/* Description with "Show more" Toggle */}
+        <p className="text-gray-700">
+          {expanded ? project.description : shortDescription + "..."}
+        </p>
+        
+        {project.description.length > 150 && (
+          <button 
+            onClick={() => setExpanded(!expanded)}
+            className="text-primary mt-2 font-semibold hover:underline"
+          >
+            {expanded ? "Show less" : "Show more"}
+          </button>
+        )}
+      </div>
     </div>
-  </div>
-)
+  );
+};
+
 
 const Projects: React.FC = () => {
   return (
