@@ -66,7 +66,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-      <motion.div
+      {/* <motion.div
         className="absolute left-1/2 bottom-10 transform -translate-x-1/2 flex justify-center items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -83,7 +83,7 @@ const Hero = () => {
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </section>
   )
 }
