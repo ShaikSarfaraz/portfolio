@@ -1,44 +1,38 @@
 "use client"
+
+import Image from "next/image"
 import type React from "react"
-import { useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
-import Link from "next/link"
 
 const ScrollLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
-  const handleClick = useCallback(
-    (e: React.MouseEvent<HTMLAnchorElement>) => {
-      e.preventDefault()
-      const targetId = href.replace("#", "")
-      const elem = document.getElementById(targetId)
-      elem?.scrollIntoView({ behavior: "smooth" })
-    },
-    [href],
-  )
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <Link
+    <a
       href={href}
       onClick={handleClick}
       className="inline-block px-8 py-3 border border-primary text-base font-medium rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
     >
       {children}
-    </Link>
-  )
+    </a>
+  );
 }
 
 const Hero = () => {
-  useEffect(() => {
-    // Any client-side only code can go here
-    return () => {
-      // Cleanup function to remove any listeners or cancel any ongoing async operations
-    }
-  }, [])
-
   return (
     <section id="hero" className="min-h-screen flex flex-col lg:flex-row items-center justify-center section-padding">
       <div className="container mx-auto container-padding lg:w-1/2">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-6">
             <span className="block">Sarfaraz Shaik</span>
             <span className="block text-primary mt-2">
@@ -51,9 +45,9 @@ const Hero = () => {
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-xl text-muted-foreground">
-            Passionate Frontend Developer with 3 years of experience in building high-performance, user-centric web
-            applications. Skilled in React, Next.js, and modern front-end technologies. I constantly explore new
-            technologies to push the boundaries of front-end development.
+            Passionate Frontend Developer with 3 years of experience in building high-performance, user-centric web applications.
+            Skilled in React, Next.js, and modern front-end technologies. I constantly explore new technologies to push the boundaries
+            of front-end development.
           </p>
           <motion.div
             className="mt-10 space-y-4 sm:space-y-0 sm:space-x-4"
@@ -62,12 +56,12 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <ScrollLink href="#contact">Get in Touch</ScrollLink>
-            <Link
+            <a
               href="/Sarfaraz-Shaik-Frontend-Developer.pdf"
-              className="inline-block px-8 py-3 bg-primary text-base font-medium rounded-full text-primary-foreground hover:bg-primary hover:opacity-70 transition-colors duration-300"
-            >
+              download
+              className="inline-block px-8 py-3 bg-primary text-base font-medium rounded-full text-primary-foreground hover:bg-primary hover:opacity-70 transition-colors duration-300">
               Download Resume
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </div>
@@ -89,7 +83,7 @@ const Hero = () => {
               <span className="mr-2 text-pink-500">const</span>
               <span className="mr-2 text-white">coder</span>
               <span className="mr-2 text-pink-500">=</span>
-              <span className="text-gray-400">{"{"}</span>
+              <span className="text-gray-400">{'{'}</span>
             </div>
             <div>
               <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
@@ -106,9 +100,9 @@ const Hero = () => {
               <span className="text-gray-400">{"', '"}</span>
               <span className="text-amber-300">Redux</span>
               <span className="text-gray-400">{"', '"}</span>
-              <span className="text-amber-300">Express</span>
+              <span className="text-amber-300">JavaScript</span>
               <span className="text-gray-400">{"', '"}</span>
-              <span className="text-amber-300">NextJS</span>
+              <span className="text-amber-300">TypeScript</span>
               <span className="text-gray-400">{"', '"}</span>
               <span className="text-amber-300">MS-Sql</span>
               <span className="text-gray-400">{"', '"}</span>
@@ -137,7 +131,7 @@ const Hero = () => {
             <div>
               <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
               <span className="text-orange-400">function</span>
-              <span className="text-gray-400">{"() {"}</span>
+              <span className="text-gray-400">{'() {'}</span>
             </div>
             <div>
               <span className="ml-8 lg:ml-16 mr-2 text-orange-400">return</span>
@@ -159,15 +153,9 @@ const Hero = () => {
               <span className="mr-2 text-amber-300">&gt;=</span>
               <span className="text-orange-400">5</span>
             </div>
-            <div>
-              <span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span>
-            </div>
-            <div>
-              <span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span>
-            </div>
-            <div>
-              <span className="text-gray-400">{`};`}</span>
-            </div>
+            <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
+            <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
+            <div><span className="text-gray-400">{`};`}</span></div>
           </code>
         </div>
       </div>
@@ -176,4 +164,3 @@ const Hero = () => {
 }
 
 export default Hero
-
