@@ -130,6 +130,13 @@ const Projects: React.FC = () => {
     <section id="projects" className="section-padding elegant-border">
       <div className="container mx-auto container-padding">
         <h2 className="section-title">Featured Projects</h2>
+        {/* <div className="flex justify-center my-5 lg:py-8">
+          <div className="flex  items-center">
+            <span className="w-24 h-[2px] bg-primary"></span>
+            <span className="bg-primary text-primary-foreground py-2 px-4 rounded-full font-bold text-xl rounded-md hover:bg-primary/90 transition duration-300 disabled:opacity-50">Featured Projects</span>
+            <span className="w-24 h-[2px] bg-primary"></span>
+          </div>
+        </div> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
               <motion.div
