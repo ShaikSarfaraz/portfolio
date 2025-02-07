@@ -1,5 +1,7 @@
 import { FaBriefcase } from "react-icons/fa"
 import { motion } from "framer-motion"
+import experienceAnimation from "../assets/lottie/code.json"
+import AnimationLottie from "./helper/animation-lottie"
 
 const Experience = () => {
   const experiences = [
@@ -30,29 +32,31 @@ const Experience = () => {
     <section id="experience" className="section-padding elegant-border">
       <div className="container mx-auto container-padding">
         <h2 className="section-title">Experience</h2>
-        <div className="space-y-16">
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className=" rounded-lg shadow-md p-6 mb-6 transition duration-300 hover:shadow-lg"
-            >
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                className="border-l-2 border-primary pl-6"
-              >
-                <div className="flex items-center mb-4">
-                  <FaBriefcase className="text-coral mr-2 text-xl" />
-                  <h3 className="text-xl font-semibold">{exp.title}</h3>
-                </div>
-                <h4 className="text-lg text-navy mb-2">{exp.company}</h4>
-                <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
-                <p className="text-gray-700">{exp.description}</p>
-                </motion.div>
-                {/* <motion.div
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+          <div>
+            <div className="space-y-16">
+              {experiences.map((exp, index) => (
+                <div
+                  key={index}
+                  className=" rounded-lg shadow-md p-6 mb-6 transition duration-300 hover:shadow-lg"
+                >
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="border-l-2 border-primary pl-6"
+                  >
+                    <div className="flex items-center mb-4">
+                      <FaBriefcase className="text-coral mr-2 text-xl" />
+                      <h3 className="text-xl font-semibold">{exp.title}</h3>
+                    </div>
+                    <h4 className="text-lg text-navy mb-2">{exp.company}</h4>
+                    <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
+                    <p className="text-gray-700">{exp.description}</p>
+                  </motion.div>
+                  {/* <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -68,10 +72,17 @@ const Experience = () => {
                 <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
                 <p className="text-gray-700">{exp.description}</p>
                 </motion.div> */}
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          <div className="flex justify-center items-center">
+            <div className="w-full h-full">
+              <AnimationLottie animationPath={experienceAnimation} />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     </section >
   )
 }
