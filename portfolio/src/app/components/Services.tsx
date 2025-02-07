@@ -11,7 +11,7 @@ const Services = () => {
     <section id="services" className="section-padding elegant-border">
       <div className="container mx-auto container-padding">
         <motion.p className="section-title font-semibold mb-4">
-          SERVICES
+          Services
         </motion.p>
 
         <motion.h2

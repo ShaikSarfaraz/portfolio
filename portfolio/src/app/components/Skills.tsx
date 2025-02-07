@@ -4,6 +4,12 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import SkillsAnima from "./SkillsAnima"
 import { TypeAnimation } from "react-type-animation"
+import SkillsFlow from "./SkillsFlow"
+import type { FC } from "react";
+import { skillsData } from "../utils/data/skills";
+// import { skillsIcon } from "../utils";
+import { skillsIcon } from "../utils/SkillsIcons";
+import Marquee from "react-fast-marquee";
 
 const Skills = () => {
   // const skills = [
@@ -16,6 +22,17 @@ const Skills = () => {
   //   { name: "Node.js", level: 75 },
   //   { name: "SQL", level: 70 },
   // ]
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  }
 
   const skills = [
     {
@@ -62,7 +79,17 @@ const Skills = () => {
   return (
     <section id="skills" className="section-padding elegant-border">
       <div className="container mx-auto container-padding">
-        <h2 className="section-title">Skills</h2>
+        <motion.h2 variants={itemVariants} className="section-title">
+          Skills
+        </motion.h2>
+        {/* <h2 className="section-title">Skills</h2> */}
+        {/* <div className="flex justify-center my-5 lg:py-8">
+          <div className="flex  items-center">
+            <span className="w-24 h-[2px] bg-primary"></span>
+            <span className="bg-primary text-primary-foreground py-2 px-4 rounded-full font-bold text-xl rounded-md hover:bg-primary/90 transition duration-300 disabled:opacity-50">Skills</span>
+            <span className="w-24 h-[2px] bg-primary"></span>
+          </div>
+        </div> */}
         {/* <TypeAnimation
                 sequence={["FrontEnd Developer", 2000, "React Developer", 2000, "UI Developer", 2000]}
                 wrapper="span"
@@ -111,6 +138,46 @@ const Skills = () => {
         </div>
       </div>
       {/* <SkillsAnima /> */}
+      <div className="w-full my-12">
+        <Marquee
+          gradient={false}
+          speed={80}
+          pauseOnHover={true}
+          pauseOnClick={true}
+          delay={0}
+          play={true}
+          direction="left"
+        >
+          {skillsData.map((skill: string, id: number) => {
+            const skillIcon = skillsIcon(skill);
+
+            return (
+              <div
+                className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
+                key={id}
+              >
+                <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
+                  <div className="flex -translate-y-[1px] justify-center">
+                    <div className="w-3/4">
+                      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center justify-center gap-3 p-6">
+                    <div className="h-8 sm:h-10">
+                      {skillIcon ? (
+                        skillIcon
+                      ) : (
+                        <span className="text-gray-500">No Icon</span>
+                      )}
+                    </div>
+                    <p className="text-white text-sm sm:text-lg">{skill}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </Marquee>
+      </div>
     </section>
   )
 }
