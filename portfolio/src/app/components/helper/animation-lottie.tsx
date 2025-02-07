@@ -1,21 +1,17 @@
-"use client"
-
-import Lottie from "lottie-react"
+"use client"; 
+import dynamic from "next/dynamic";
+import Lottie from "lottie-react";
 
 interface AnimationLottieProps {
-  animationPath: object
-  width?: string
+  animationPath: object;
+  width?: string;
 }
 
 const AnimationLottie: React.FC<AnimationLottieProps> = ({ animationPath, width = "95%" }) => {
-  return (
-    <Lottie
-      animationData={animationPath}
-      loop
-      autoplay
-      style={{ width }}
-    />
-  )
-}
+  if (typeof window === "undefined") return null; // Prevents SSR issues
 
-export default AnimationLottie
+  return <Lottie animationData={animationPath} loop autoplay style={{ width }} />;
+};
+
+// Dynamically import with SSR disabled
+export default dynamic(() => Promise.resolve(AnimationLottie), { ssr: false });
