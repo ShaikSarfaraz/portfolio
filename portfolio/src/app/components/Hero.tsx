@@ -1,17 +1,20 @@
 "use client"
 import type React from "react"
-import { useEffect } from "react"
+import { useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import Link from "next/link"
 
 const ScrollLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
-    const targetId = href.replace("#", "")
-    const elem = document.getElementById(targetId)
-    elem?.scrollIntoView({ behavior: "smooth" })
-  }
+  const handleClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault()
+      const targetId = href.replace("#", "")
+      const elem = document.getElementById(targetId)
+      elem?.scrollIntoView({ behavior: "smooth" })
+    },
+    [href],
+  )
 
   return (
     <Link
@@ -27,6 +30,9 @@ const ScrollLink = ({ href, children }: { href: string; children: React.ReactNod
 const Hero = () => {
   useEffect(() => {
     // Any client-side only code can go here
+    return () => {
+      // Cleanup function to remove any listeners or cancel any ongoing async operations
+    }
   }, [])
 
   return (
@@ -56,13 +62,12 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <ScrollLink href="#contact">Get in Touch</ScrollLink>
-            <a
+            <Link
               href="/Sarfaraz-Shaik-Frontend-Developer.pdf"
-              download
               className="inline-block px-8 py-3 bg-primary text-base font-medium rounded-full text-primary-foreground hover:bg-primary hover:opacity-70 transition-colors duration-300"
             >
               Download Resume
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
