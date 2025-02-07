@@ -20,12 +20,12 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pl-3 pr-3">
-        {/* <Hero /> */}
+        <Hero />
         <About />
         <Skills />
         <Services />
         <Projects />
-        <Experience />
+        {/* <Experience /> */}
         <Contact />
       </main>
     </div>
