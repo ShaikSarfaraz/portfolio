@@ -10,6 +10,7 @@ import { skillsData } from "../utils/data/skills";
 // import { skillsIcon } from "../utils";
 import { skillsIcon } from "../utils/SkillsIcons";
 import Marquee from "react-fast-marquee";
+import SkillCloud from "./SkillCloud"
 
 const Skills = () => {
   // const skills = [
@@ -178,6 +179,7 @@ const Skills = () => {
           })}
         </Marquee>
       </div>
+    {/* <SkillCloud /> */}
     </section>
   )
 }
