@@ -31,6 +31,30 @@ const Footer = () => {
             >
               <FaTwitter size={24} />
             </a>
+            <a
+              href="https://github.com/ShaikSarfaraz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary transition duration-300"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sarfaraz-shaik/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary transition duration-300"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://x.com/sohaillsarfaraz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary transition duration-300"
+            >
+              <FaTwitter size={24} />
+            </a>
           </div>
         </div>
       </div>
