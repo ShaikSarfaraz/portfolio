@@ -180,7 +180,6 @@ const Skills = () => {
         </Marquee>
       </div>
     {/* <SkillCloud /> */}
-    {/* <SkillCloud /> */}
     </section>
   )
 }
