@@ -15,7 +15,7 @@ export const useSmoothScroll = () => {
       }
     }
 
-    handleHashChange() // Handle initial load
+    handleHashChange()
     window.addEventListener("hashchange", handleHashChange)
 
     return () => {
