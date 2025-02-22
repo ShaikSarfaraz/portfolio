@@ -15,11 +15,6 @@ export const metadata: Metadata = {
   description: "Frontend Developer",
 }
 
-// export const metadata: Metadata = {
-//   title: "Sarfaraz Shaik - Portfolio",
-//   description: "Frontend Developer",
-// }
-
 export default function RootLayout({
   children,
 }: {
